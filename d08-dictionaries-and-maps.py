@@ -1,20 +1,22 @@
 # Description: https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem
-import sys
 
 n = int(input())
-print(sys.stdin)
+
 phone_book = {}
 for i in range(n):
-    name, phone = input().split()
-    phone_book[name] = phone
+    name, num = input().split()
+    phone_book[name] = num
 
 while True:
     try:
         q = input()
-        if q in phone_book:
+        
+        if not q:  # detect EOF when input comes from sys.stdin
+            break
+        elif q in phone_book:
             print(f'{q}={phone_book[q]}')
         else:
             print('Not found')
-
-    except EOFError:
+        
+    except EOFError:  # detect EOF when input comes from data redirected by bash
         break
