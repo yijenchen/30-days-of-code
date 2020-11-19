@@ -9,5 +9,5 @@ d_in = float(input())
 s_in = input()
 
 print(i + i_in)
-print(d + d_in)
+print(round(d + d_in, ndigits=1))
 print(s + s_in)
