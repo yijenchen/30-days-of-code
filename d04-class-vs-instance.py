@@ -22,7 +22,7 @@ class Person:
 
 t = int(input())
 for i in range(t):
-    age = int(input())         
+    age = int(input())
     p = Person(age)
     p.amIOld()
     for j in range(3):
