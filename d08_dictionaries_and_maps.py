@@ -5,7 +5,7 @@ n = int(input())
 phone_book = {}
 for i in range(n):
     name, num = input().split()
-    phone_book[name] = num
+    phone_book[name] = int(num)
 
 while True:
     try:
@@ -14,9 +14,9 @@ while True:
         if not q:  # detect EOF when input comes from sys.stdin
             break
         elif q in phone_book:
-            print(f'{q}={phone_book[q]}')
+            print(f'{q}={phone_book[q]}')    
         else:
             print('Not found')
         
-    except EOFError:  # detect EOF when input comes from data redirected by bash
+    except EOFError:  # detect EOF when input comes from data redirection
         break
