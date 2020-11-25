@@ -4,19 +4,19 @@ n = int(input())
 
 phone_book = {}
 for i in range(n):
-    name, num = input().split()
-    phone_book[name] = int(num)
+    name, phone = input().split()
+    phone_book[name] = int(phone)
 
 while True:
     try:
-        q = input()
+        name = input()
         
-        if not q:  # detect EOF when input comes from sys.stdin
+        if not name:  # detect EOF when input comes from sys.stdin
             break
-        elif q in phone_book:
-            print(f'{q}={phone_book[q]}')    
+        elif name in phone_book:
+            print(f'{name}={phone_book[name]}')    
         else:
             print('Not found')
         
-    except EOFError:  # detect EOF when input comes from data redirection
+    except EOFError:  # detect EOF when input comes from file redirection
         break
