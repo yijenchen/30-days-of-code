@@ -1,9 +1,7 @@
 # Description: https://www.hackerrank.com/challenges/30-binary-numbers/problem
-# Notes:
-#   - can also use built-in `bin()` to convert decimal int to str binary rep
-#   - code works for nonnegative int
+# Note: can also use built-in `bin()` to convert decimal int to str binary rep
 
-n = int(input())
+n = abs(int(input()))  # make code work for any integer
 
 n_bin = ''
 while n:
