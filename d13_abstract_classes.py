@@ -1,13 +1,15 @@
 # Description: https://www.hackerrank.com/challenges/30-abstract-classes/problem
 
-from abc import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod  #, ABC
 
-class Book(object, metaclass=ABCMeta):
-    def __init__(self,title,author):
+class Book(object, metaclass=ABCMeta):  #class Book(object, ABC):
+    def __init__(self, title, author):
         self.title=title
-        self.author=author   
+        self.author=author
+        
     @abstractmethod
-    def display(): pass
+    def display():
+        pass
 
 class MyBook(Book):
     def __init__(self, title, author, price):
@@ -20,8 +22,8 @@ class MyBook(Book):
         print(f'Price: {self.price}')
 
 
-title=input()
-author=input()
-price=int(input())
-new_novel=MyBook(title,author,price)
+title = input()
+author = input()
+price = int(input())
+new_novel = MyBook(title, author, price)
 new_novel.display()
