@@ -1,8 +1,8 @@
 # Description: https://www.hackerrank.com/challenges/30-abstract-classes/problem
 
-from abc import ABCMeta, abstractmethod  #, ABC
+from abc import ABCMeta, abstractmethod
 
-class Book(object, metaclass=ABCMeta):  #class Book(object, ABC):
+class Book(metaclass=ABCMeta):
     def __init__(self, title, author):
         self.title=title
         self.author=author
