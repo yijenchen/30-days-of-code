@@ -18,7 +18,7 @@ class Person:
     
     def yearPasses(self):
         self.age += 1
-        
+
 
 t = int(input())
 for i in range(t):

@@ -1,7 +1,7 @@
 # Description: https://www.hackerrank.com/challenges/30-operators/problem
 
 def solve(meal_cost, tip_percent, tax_percent):
-    total_cost = meal_cost * (1 + tip_percent * 1e-2 + tax_percent * 1e-2)
+    total_cost = meal_cost * (1 + tip_percent/100 + tax_percent/100)
     print(round(total_cost))
 
 if __name__ == '__main__':
