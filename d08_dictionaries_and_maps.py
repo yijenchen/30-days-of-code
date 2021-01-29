@@ -5,7 +5,7 @@ n = int(input())
 phone_book = {}
 for i in range(n):
     name, phone = input().split()
-    phone_book[name] = int(phone)
+    phone_book[name] = phone  # overwrite old value for existing key
 
 while True:
     try:
@@ -14,7 +14,7 @@ while True:
         if not name:  # detect EOF when input comes from sys.stdin
             break
         elif name in phone_book:
-            print(f'{name}={phone_book[name]}')    
+            print(f'{name}={phone_book[name]}')
         else:
             print('Not found')
         
