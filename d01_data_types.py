@@ -4,7 +4,7 @@ i = 4
 d = 4.0
 s = 'HackerRank '
 
-i_in = int(input())
+i_in = int(input())  # no need to declare variables in python
 d_in = float(input())
 s_in = input()
 
