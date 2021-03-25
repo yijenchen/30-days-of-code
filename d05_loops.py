@@ -2,7 +2,6 @@
 
 if __name__ == '__main__':
     n = int(input())
-    assert 2 <= n <= 20, 'Invalid input'
     
     for i in range(1, 11):
-        print(f'{n} x {i} = {n * i}')
+        print(f'{n} x {i} = {n*i}')

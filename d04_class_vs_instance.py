@@ -7,7 +7,7 @@ class Person:
             print('Age is not valid, setting age to 0.')
         else:
             self.age = initialAge
-     
+    
     def amIOld(self):
         if self.age < 13:
             print('You are young.')
@@ -26,6 +26,6 @@ for i in range(t):
     p = Person(age)
     p.amIOld()
     for j in range(3):
-        p.yearPasses()       
+        p.yearPasses()
     p.amIOld()
     print("")
